@@ -4,9 +4,7 @@ import Parser
 from pprint import pprint
 
 exampleScript = """
-func: main, {
-    call: write, 'Hello World';
-};
+call: write, 'Hello World';
 """
 
 lexed = lexer.lexText(exampleScript)
@@ -14,5 +12,4 @@ lexed = lexer.lexText(exampleScript)
 # pprint(lexed)
 ast = Parser.getAST(lexed)
 
-
-12
+pprint(ast)

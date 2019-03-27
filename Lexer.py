@@ -126,6 +126,13 @@ class LexerReader():
         self.index += steps
         return self
     
+    def getChar(self):
+        if self.index > len(self.lex) - 1:
+            return None
+        for i in self.getToken():
+            return self.getToken()[i]
+
+    
     def hereOn(self):
         """
         Return from current index till end of lexed
@@ -144,5 +151,3 @@ class LexerReader():
             return None
         for i in self.lex[self.index]:
             return i
-            # now not adding to children]
-            # prob new if statement
