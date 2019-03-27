@@ -4,7 +4,7 @@ import Parser
 from pprint import pprint
 
 exampleScript = """
-call: write, 'Hello World';
+call: write, 'Hello World\!\\\\';
 """
 
 lexed = lexer.lexText(exampleScript)

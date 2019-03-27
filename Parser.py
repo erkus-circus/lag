@@ -75,7 +75,6 @@ def ASTCall(lex):
                 gotFuncName = True
             
         if not gotArgs:
-
             if reader.getName() == 'strSep':
                 funcDat['args'].append(ASTStr(reader.hereOn()))
                 inLoop = 0
@@ -95,10 +94,13 @@ def ASTStr(lex):
         if escaped:
             st += char
             escaped = 0
+            continue
+            
         else:
             if char == '\\':
                 escaped = 1
                 continue
+
             if reader.getName() == 'strSep':
                 print('strSep')
                 inLoop = 1
@@ -107,5 +109,5 @@ def ASTStr(lex):
                 print('add:',char)
                 st += char
         
+    print(st)
     return StrNode(st)
-                

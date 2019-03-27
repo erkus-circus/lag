@@ -37,6 +37,9 @@ tCurlyBracket = Type('{}','curlybracket',False)
 tColon = Type(':','colon',False)
 tSemicolon = Type(';','semicolon',False)
 tIdentifier = Type(idents,'id')
+tExclamation = Type('!','explanation',False)
+tForwardSlash = Type('/','fslash',False)
+tBackSlash = Type('\\','bslash',False)
 
 types = [
     tNum,
@@ -50,6 +53,9 @@ types = [
     tColon,
     tCurlyBracket,
     tComma,
+    tExclamation,
+    tForwardSlash,
+    tBackSlash,
 ]
 
 def getCharType(char):
